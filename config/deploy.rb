@@ -1,5 +1,5 @@
 require 'bundler/capistrano'
-#require 'rvm/capistrano'
+require 'rvm/capistrano'
 #set :rvm_ruby_string, 'ruby-1.9.3'
 #
 
@@ -8,12 +8,12 @@ require 'bundler/capistrano'
 set :ssh_options, {:auth_methods => "publickey"}
 set :ssh_options, {:keys => "/usr/local/election-ec2-andreea.pem"}
 
-set :deploy_to, "~/deploy/cap2_test"
+#set :deploy_to, "~/deploy/cap2_test"
 
-set :default_environment, {
-  'PATH' => "#{deploy_to}/bin:$PATH",
-  'GEM_HOME' => "#{deploy_to}/gems" 
- }
+#set :default_environment, {
+#  'PATH' => "#{deploy_to}/bin:$PATH" #,
+#  'GEM_HOME' => "#{deploy_to}/gems" 
+ #}
 
 set :user, 'ec2-user'
 set :application, "cap2_test"
